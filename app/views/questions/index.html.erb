@@ -1,0 +1,32 @@
+<h2><%= l(:label_questions_for_me)%></h2>
+
+<div class="autoscroll">
+	<table class="list questions">
+	  <thead>
+	    <tr>
+	      <th>#</th>
+	      <th><%= t(:field_project)%></th>
+	      <th><%= t(:field_issue) %></th>
+	      <th><%= t(:field_question_asked_by_id) %></th>
+	      <th><%= t(:field_formatted_questions) %></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  	<% @questions.each do |question| 
+	  		issue = question.issue
+	  		%>
+		  <tr id="question-<%= question.id %>" class="question-table <%= cycle('odd', 'even') %>">
+		    <td class="id"><%= link_to issue.id, issue_path(issue) %></td>
+		    <td class="project"><%= link_to issue.project, project_path(issue.project)%></td>
+		    <td class="issue">#<%= issue.id %> - <%= link_to truncate(issue.subject, length: 120), issue_path(issue)%></td>
+		    <td class="author"><%= h question.author %></td>
+		    <td class="note"><%= link_to truncate(question.journal.notes, length:  120), issue_path(issue, :anchor => "change-#{question.journal.id}") %></td>
+		  </tr>
+	  <% end -%>
+	  </tbody>
+	</table>
+</div>
+
+<% content_for :sidebar do %>
+    <%# render :partial => 'issues/sidebar' %>
+<% end %>

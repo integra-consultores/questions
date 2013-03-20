@@ -1,0 +1,19 @@
+en:
+  field_question_assign_to_id: Asignar pregunta a
+  field_question_assigned_to_id: Pregunta asignada a
+  field_question_asked_by_id: Pregunta creada por
+  field_formatted_questions: Preguntas
+  label_questions: Preguntas
+  label_questions_for_me: Preguntas para mí
+  text_question: Pregunta
+  text_question_answered: Pregunta Respondida
+  text_answer: Responder
+  text_anyone: Cualquiera
+  text_question_for: Pregunta para
+  text_question_for_anyone: Pregunta para cualquiera
+  text_questions_for_me: Pregunta para mí
+  text_question_asked: Pregunta creada
+  text_question_remove: "<< Eliminar Pregunta>>"
+  question_text_asked_by: "Preguntada por mí"
+  question_text_assigned_to: "Asignada a"
+  question_text_created_on: "Creada el"
