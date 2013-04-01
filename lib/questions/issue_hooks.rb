@@ -1,4 +1,4 @@
-module QuestionPlugin
+module Questions
   class IssueHooks < HooksBase
     
     # Applies the question class to each journal div if they are questions

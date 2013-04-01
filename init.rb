@@ -1,15 +1,15 @@
 ActionDispatch::Callbacks.to_prepare do
-  require_dependency 'question_plugin/journal_patch'
-  require_dependency 'question_plugin/issue_patch'
-  require_dependency 'question_plugin/issue_hooks'
-  require_dependency 'question_plugin/layout_hooks'
-  require_dependency 'question_plugin/journal_hooks'
-  #require_dependency 'question_plugin/queries_helper_patch'
-  #require_dependency 'question_plugin/query_patch'
+  require_dependency 'questions/journal_patch'
+  require_dependency 'questions/issue_patch'
+  require_dependency 'questions/issue_hooks'
+  require_dependency 'questions/layout_hooks'
+  require_dependency 'questions/journal_hooks'
+  #require_dependency 'questions/queries_helper_patch'
+  #require_dependency 'questions/query_patch'
 end
 
-Redmine::Plugin.register :question_plugin do
-  name 'Question plugin'
+Redmine::Plugin.register :questions do
+  name 'Questions'
   author 'Bishma Stornelli'
   description 'This is a plugin for Redmine that will allow users to ask questions to each other in issue notes'
   version '0.1.0'

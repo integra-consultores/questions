@@ -1,6 +1,6 @@
 require_dependency 'journal'
 
-module QuestionPlugin
+module Questions
   module JournalPatch
     def self.included(base) # :nodoc:
       base.extend(ClassMethods)
@@ -27,6 +27,6 @@ end
 
 # Guards against including the module multiple time (like in tests)
 # and registering multiple callbacks
-unless Journal.included_modules.include? QuestionPlugin::JournalPatch
-  Journal.send(:include, QuestionPlugin::JournalPatch)
+unless Journal.included_modules.include? Questions::JournalPatch
+  Journal.send(:include, Questions::JournalPatch)
 end

@@ -1,6 +1,6 @@
 require_dependency 'issue'
 
-module QuestionPlugin
+module Questions
 
   module IssuePatch
     def self.included(base) # :nodoc:
@@ -100,6 +100,6 @@ end
 
 # Guards against including the module multiple time (like in tests)
 # and registering multiple callbacks
-unless Issue.included_modules.include? QuestionPlugin::IssuePatch
-  Issue.send(:include, QuestionPlugin::IssuePatch)
+unless Issue.included_modules.include? Questions::IssuePatch
+  Issue.send(:include, Questions::IssuePatch)
 end

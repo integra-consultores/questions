@@ -1,4 +1,4 @@
-module QuestionPlugin
+module Questions
   class JournalHooks < HooksBase
     
     

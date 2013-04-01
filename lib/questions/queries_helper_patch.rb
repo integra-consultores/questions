@@ -1,6 +1,6 @@
 require_dependency 'queries_helper'
 
-module QuestionPlugin
+module Questions
   module QueriesHelperPatch
     def self.included(base) # :nodoc:
       base.extend(ClassMethods)
@@ -57,6 +57,6 @@ end
 
 # Guards against including the module multiple time (like in tests)
 # and registering multiple callbacks
-unless QueriesHelper.included_modules.include? QuestionPlugin::QueriesHelperPatch
-  QueriesHelper.send(:include, QuestionPlugin::QueriesHelperPatch)
+unless QueriesHelper.included_modules.include? Questions::QueriesHelperPatch
+  QueriesHelper.send(:include, Questions::QueriesHelperPatch)
 end

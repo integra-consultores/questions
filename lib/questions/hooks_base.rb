@@ -1,4 +1,4 @@
-module QuestionPlugin
+module Questions
   class HooksBase < Redmine::Hook::ViewListener
     # Have to inclue Gravatars because ApplicationHelper will not get it
     include GravatarHelper::PublicMethods

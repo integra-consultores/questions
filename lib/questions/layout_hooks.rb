@@ -1,4 +1,4 @@
-module QuestionPlugin
+module Questions
   class LayoutHooks < Redmine::Hook::ViewListener
   
     # Add a question CSS class
