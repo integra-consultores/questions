@@ -73,12 +73,12 @@ JS
       
       if question_count > 0
         return link_to(l(:text_questions_for_me) + " (#{question_count})",
-                       (project.nil? ? {
+                        {
                          :controller => 'questions',
                          :action => 'index',
-                         :project => project,
+                         :project_id => project,
                          :only_path => true
-                       } : questions_in_project_path(project)),
+                        },
                        { :class => 'question-link' }
                        ) + "<BR/>".html_safe
       else
